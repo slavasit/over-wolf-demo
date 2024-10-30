@@ -1,0 +1,1151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Overwolf</title>
+  <object type="image/svg+xml" data="./assets-web-dev/icons.svg" style="display: none;"></object>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+    
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+    integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+  <script src="https://inorganik.github.io/countUp.js/dist/countUp.umd.js"></script>
+
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700" rel="stylesheet">
+  <link rel="stylesheet" href="./assets-web-dev/_brand-tokens.css?312">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+</head>
+
+<style>
+  svg.logo-icon {
+    width: 9.6rem;
+    height: 4rem;
+  }
+  .arrow-down:hover {
+    cursor: pointer;
+  }
+  .arrow-down {
+    display: flex;
+    align-self: center;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    margin: 24rem auto 6rem;
+  }
+  .arrow-down svg {
+    color: #ffffff;
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  nav {
+    padding: 0 0.6rem;
+    height: 5rem;
+    display: flex;
+    justify-content: space-between;
+  }
+  button.header-join-btn {
+    height: 2.2rem;
+    padding: 0.231rem 1.375rem;
+    width: fit-content;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+    border-color: #DFDFDF;
+    color: #DFDFDF;
+    background: transparent;
+    margin: 0.938rem 0;
+    border-width: 0.063rem;
+  }
+  button.header-join-btn:hover {
+    background: #F05C48;
+    cursor: pointer;
+    color: #ffffff;
+  }
+  #hero {
+    background-image: url('./assets-web-dev/hero/hero-bg.png');
+    background-size: 60rem;
+    background-position: 94% -2%;
+    background-repeat: no-repeat;
+    height: 56.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  h1.enter-the-guild {
+    font-family: "Montserrat", sans-serif;
+    color: #ffffff;
+    font-size: 4rem;
+    line-height: 4.5rem;
+    margin: 0;
+  }
+  h2.we-emp {
+    margin: 1.5rem 0;
+    color: #DFDFDF;
+    font-size: 1.375rem;
+    font-weight: 500;
+    line-height: 2rem;
+    font-family: "Montserrat", sans-serif;
+  }
+  .hero-box {
+    width: 87.25rem;
+    margin: 0 auto;
+    justify-content: space-between;
+    display: flex;
+  }
+  .wolf-img img {
+    width: 100%;
+  }
+  .wolf-img {
+    width: 57rem;
+    margin-right: -11.2rem;
+  }
+  .left-hero-box {
+    margin-top: 11.9rem;
+  }
+  button.join-now {
+    height: 3rem;
+    padding: 0.875rem 2rem;
+    width: fit-content;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+    letter-spacing: 0.075rem;
+    background: #D34037;
+    box-shadow: none;
+    border: none;
+    color: #ffffff;
+  }
+  .about-overwolf-title {
+    font-family: "Montserrat", sans-serif;
+    color: #ffffff;
+    font-size: 2.75rem;
+    font-weight: 700;
+    line-height: 3.25rem;
+    margin: 5.4rem auto 1rem;
+    text-align: center;
+  }
+  #an-ic {
+    width: 7.563rem;
+    height: 9.875rem;
+  }
+  .inner-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 6rem 3rem;
+    background: #101010;
+    width: 24%;
+    margin: 1rem;
+  }
+  .flex-box-about {
+    display: flex;
+    width: 87.25rem;
+    justify-content: center;
+    margin: auto;
+    flex-wrap: wrap;
+    flex: 1 0 30%;
+    padding-bottom: 6rem;
+  }
+  .anim-icon {
+    width: 7rem;
+    height: 7rem;
+  }
+  h3.box-title {
+    color: #ffffff;
+    font-size: 1.5rem;
+    padding: 2.563rem 0 1.438rem;
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+  }
+  p.box-parag {
+    color: #dfdfdf;
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.95rem;
+    text-align: center;
+    font-weight: 400;
+    line-height: 1.75rem;
+    margin: 0;
+  }
+  .box-width {
+    width: 87.25rem;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 3.5rem;
+  }
+  .counter-box {
+    width: auto;
+  }
+  .anim-num {
+    font-size: 4rem;
+    color: #D34037;
+    display: flex;
+    font-weight: 700;
+    font-family: "Montserrat", sans-serif;
+    line-height: 4.5rem;
+  }
+  h4.spanbt {
+    color: #DFDFDF;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+    line-height: 1.5rem;
+    font-size: 1rem;
+    letter-spacing: 0.075rem;
+    margin-top: 0.6rem;
+  }
+  .video-container {
+    text-align: center;
+    padding-top: 10.4rem;
+    padding-bottom: 11.5rem;
+  }
+  .video-container iframe {
+    width: 70rem;
+    height: 39.4rem;
+  }
+  .in-app-box {
+    color: #ffffff;
+    padding: 3.1rem 3.5rem 2rem;
+    background-color: #101010;
+  }
+  h3.suire-ttle {
+    color: #ffffff;
+    font-family: "Montserrat", sans-serif;
+    font-size: 2.75rem;
+    font-weight: 700;
+    line-height: 3.25rem;
+    text-align: center;
+    margin: 0;
+  }
+  .app-box {
+    width: 87.25rem;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+  }
+  .app-icon-svg {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  h5.app-title {
+    color: #ffffff;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.75rem;
+    margin-bottom: 0;
+    margin-top: 1.3rem;
+  }
+  p.app-parag {
+    color: #DFDFDF;
+    font-family: "Lato", sans-serif;
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 1.75rem;
+    margin-top: 0.5rem;
+  }
+  .swiper {
+    width: 100%;
+    height: auto;
+    margin: 1.25rem auto;
+    background: #101010;
+    width: 120rem;
+    margin-top: 6rem;
+    padding-top: 3.4rem;
+    padding-bottom: 10rem;
+  }
+  .bg-1 {
+    background: url(./assets-web-dev/success-stories-slider/desktop/slide-1.png) center center no-repeat;
+    background-size: cover;
+  }
+  .bg-2 {
+    background: url(./assets-web-dev/success-stories-slider/desktop/slide-2.png) center center no-repeat;
+    background-size: cover;
+  }
+  .bg-3 {
+    background: url(./assets-web-dev/success-stories-slider/desktop/slide-3.png) center center no-repeat;
+    background-size: cover;
+  }
+  .bg-4 {
+    background: url(./assets-web-dev/success-stories-slider/desktop/slide-4.png) center center no-repeat;
+    background-size: cover;
+  }
+  .bg-5 {
+    background: url(./assets-web-dev/success-stories-slider/desktop/slide-5.png) center center no-repeat;
+    background-size: cover;
+  }
+  .bg-6 {
+    background: url(./assets-web-dev/success-stories-slider/desktop/slide-6.png) center center no-repeat;
+    background-size: cover;
+  }
+  .bg-7 {
+    background: url(./assets-web-dev/success-stories-slider/desktop/slide-7.png) center center no-repeat;
+    background-size: cover;
+  }
+  .slide-bg {
+    width: 100%;
+    height: 21.5rem;
+  }
+  .swiper-wrapper {
+    margin-left: -29.7rem;
+  }
+  .swiper-slide {
+    width: 39.5rem !important;
+    display: flex;
+    flex-direction: column;
+    margin-right: 1.563rem !important;
+  }
+  h3.success-stories-title {
+    color: #ffffff;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 2.75rem;
+    margin-bottom: 3.2rem;
+  }
+  .icon-row {
+    display: flex;
+    align-items: center;
+    margin-top: 1.9rem;
+  }
+  p.runmas {
+    color: #ffffff;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.5rem;
+    padding-left: 1rem;
+  }
+  .icon-row img {
+    width: 3.125rem;
+    height: 3.125rem;
+  }
+  p.slide-parag {
+    color: #9F9F9F;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+    margin-top: 0.4rem;
+  }
+  .swiper-button-next, .swiper-button-prev {
+    background: #202020;
+    padding: 0.6rem 1rem;
+    top: 23rem;
+  }
+  .swiper-button-next:after, .swiper-button-prev:after {
+    font-size: 1.5rem;
+    color: #9F9F9F;
+    align-self: center;
+  }
+  .swiper-button-next:hover, .swiper-button-prev:hover {
+    background: #303030;
+  }
+  .back-to-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 3.8rem;
+  }
+  svg.scroll-icon {
+    background: transparent;
+    color: #ffffff;
+    width: 1.7rem;
+    height: 1.7rem;
+    cursor: pointer;
+  }
+  button.scroll-to-top {
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    cursor: pointer;
+  }
+  p.back-text {
+    color: #DFDFDF;
+    margin: 0;
+    font-size: 1rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    line-height: 1.5rem;
+  }
+  .footer-logo {
+    text-align: center;
+    padding-top: 3.4rem;
+  }
+  .bt-line {
+    background: #101010;
+    height: 3rem;
+    margin-top: 3rem;
+  }
+  body {
+    margin: 0;
+  }
+  @media (max-width: 1920px) {
+    .swiper {
+      width: 98%;
+      margin: 6rem auto 0;
+    }
+  }
+  .mobile{
+      display: none 
+    }
+  @media(max-width:1550px){
+    html {
+    font-size: 1.05vw;
+}
+
+section#hero {
+    background-position: 43rem 0;
+}
+  }
+
+  @media(max-width:650px){
+    .desktop{
+      display: none !important;
+    }
+    .mobile{
+      display: block !important;
+    }
+    html {
+    font-size: 2.06vw;
+}
+
+body {
+    margin: 10px;
+}
+
+svg.logo-icon {
+    width: 15rem;
+    height: 7rem;
+}
+
+button.header-join-btn {
+    font-size: 2rem;
+    width: 10rem;
+    height: 5rem;
+}
+
+.hero-box {
+    width: 94%;
+}
+
+.left-hero-box {
+    margin-top: 10rem;
+}
+
+h2.we-emp {
+    font-size: 2.2rem;
+    padding-top: 3rem;
+    line-height: 3.2rem;
+    text-align: center;
+}
+
+h2.we-emp br {
+    display: none;
+}
+
+h1.enter-the-guild {
+    width: 90%;
+    margin: auto;
+}
+
+
+
+button.join-now {
+    font-size: 2rem;
+    width: 100%;
+    height: 6rem;
+    margin-top: 1.6rem;
+}
+
+section#hero {
+    height: 96rem;
+    background-position: -7.4rem 44.3rem;
+}
+
+button.arrow-down {
+    margin: 0;
+}
+
+.arrow-down svg {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+h2.about-overwolf-title {
+    margin-top: 13.8rem;
+    font-size: 4rem;
+}
+
+.flex-box-about {
+    width: 100%;
+    flex-direction: column;
+    
+}
+
+.inner-box {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    margin-top: 3rem;
+    padding-bottom: 5rem;
+}
+.mobile-icon.mobile {
+    margin-top: 6rem;
+    width: 14rem;
+}
+
+h3.box-title {
+    font-size: 3rem;
+}
+
+p.box-parag {
+    font-size: 2rem;
+    line-height: 3.6rem;
+    padding-top: 2rem;
+    width: 90%;
+    margin: auto;
+}
+
+.inner-box br {
+    display: none;
+}
+.mobile-icon.mobile {
+    margin-top: 6rem;
+    width: 14rem;
+}
+
+h3.box-title {
+    font-size: 3rem;
+}
+
+p.box-parag {
+    font-size: 2rem;
+    line-height: 3.6rem;
+    padding-top: 2rem;
+    width: 90%;
+    margin: auto;
+}
+
+.inner-box br {
+    display: none;
+}
+
+.box-width {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.counter-box {
+    width: 50%;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5.2rem;
+}
+
+.anim-num {
+    font-size: 5.8rem;
+}
+
+h4.spanbt {
+    font-size: 2rem;
+    padding-top: 1.2rem;
+    line-height: 2.6rem;
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 24rem;
+}
+
+.video-container {
+    padding-bottom: 0;
+}
+
+h3.suire-ttle br {
+    display: none;
+}
+
+h3.suire-ttle {
+    font-size: 4rem;
+    line-height: 5rem;
+    padding-top: 5.3rem;
+}
+
+.app-box {
+    flex-direction: column;
+    margin-top: 0;
+    width: 100%;
+}
+
+.app-icon {
+    width: 2rem;
+}
+
+svg.app-icon-svg {
+    width: 5rem;
+    height: 5rem;
+    margin-top: 6rem;
+}
+
+h5.app-title {
+    font-size: 3rem;
+    padding-top: 2.5rem;
+}
+
+.in-app-box {
+    margin-top: 3rem;
+    padding: 0 4.5rem 3.3rem;
+}
+
+p.app-parag {
+    font-size: 2.3rem;
+    padding-top: 1.7rem;
+    line-height: 3.6rem;
+}
+
+p.app-parag br {
+    display: none;
+}
+.swiper-wrapper {
+    margin-left: 0;
+}
+
+.swiper-slide {
+    width: 100% !important;
+    padding-bottom: 9rem;
+    margin-right: auto !important;
+}
+.back-to-top {
+    padding-top: 2rem;
+}
+
+svg.scroll-icon {
+    width: 3rem;
+    height: 3rem;
+}
+
+p.back-text {
+    padding-top: 1.7rem;
+    font-size: 2rem;
+}
+
+h3.success-stories-title {
+    font-size: 4rem;
+    margin-top: 2.1rem;
+}
+
+.slide-bg {
+    height: 42.9rem;
+    width: 97%;
+    margin: auto;
+    margin-top: 0.2rem;
+}
+
+.icon-row img {
+    width: 6.4rem;
+    height: 6.4rem;
+}
+
+.icon-row {
+    margin-top: 3rem;
+    width: 97%;
+    margin: auto;
+    margin-top: 3rem;
+}
+
+p.runmas {
+    font-size: 3rem;
+    padding-left: 2rem;
+}
+
+p.slide-parag {
+    width: 95%;
+    margin: auto;
+    font-size: 2rem;
+    padding-top: 1rem;
+    line-height: 3rem;
+}
+
+p.slide-parag br {
+    display: none;
+}
+
+.swiper-button-next, .swiper-button-prev {top: 95rem !important;}
+
+.swiper-button-next:after, .swiper-button-prev:after {
+    font-size: 2.5rem;
+}
+  }
+</style>
+
+
+<body>
+  <header>
+    <nav>
+      <a href="/" class="logo">
+        <svg class="logo-icon">
+          <use xlink:href="./assets-web-dev/icons.svg#logo"></use>
+        </svg>
+      </a>
+      <a href="//discord.com/invite/overwolf-developers" class="joon-btn">
+        <button class="header-join-btn">Join</button>
+      </a>
+
+    </nav>
+  </header>
+  <main>
+    <section id="hero">
+      <div class="hero-box">
+        <div class="left-hero-box">
+          <h1 class="enter-the-guild">
+            Enter the Guild of <br>
+            In-Game Creators
+          </h1>
+          <h2 class="we-emp">
+            We empower players, developers and creators to make the <br> best games even better through UGC
+          </h2>
+          <a href="//discord.com/invite/overwolf-developers">
+            <button class="join-now">
+              JOIN NOW
+            </button>
+          </a>
+        </div>
+       
+      </div>
+      <button onclick="scrollToNextSection(event)" class="arrow-down">
+        <svg>
+          <use xlink:href="./assets-web-dev/icons.svg#arrowDown"></use>
+        </svg>
+      </button>
+    </section>
+    <section id="about-overwolf">
+      <h2 class="about-overwolf-title">
+        About Overwolf
+      </h2>
+      <div class="flex-box-about">
+        <div class="inner-box">
+          <div class="anim-icon desktop" >
+            <lottie-player id="an-ic" src="./assets-web-dev/about-overwolf/json-lottie-files-icons/swords.json"
+              background="transparent" speed="1" loop autoplay></lottie-player>
+          </div>
+          <div class="mobile-icon mobile">
+            <img src="./assets-web-dev/about-overwolf/icons/swords.png" alt="">
+          </div>
+          <h3 class="box-title">
+            Legendary Apps
+          </h3>
+          <p class="box-parag">
+            Create powerful desktop apps and <br> overlays for AAA games, using basic <br> HTML and Javascript
+
+          </p>
+        </div>
+        <div class="inner-box">
+          <div class="anim-icon desktop">
+            <lottie-player id="an-ic" src="./assets-web-dev/about-overwolf/json-lottie-files-icons/anvil.json"
+              background="transparent" speed="1" loop autoplay></lottie-player>
+          </div>
+          <div class="mobile-icon mobile">
+            <img src="./assets-web-dev/about-overwolf/icons/anvil.png" alt="">
+          </div>
+          <h3 class="box-title">
+            Legendary Mods
+          </h3>
+          <p class="box-parag">
+            Create, manage and monetize mods <br> for AAA games, exposing them <br> to millions of gamers
+          </p>
+        </div>
+        <div class="inner-box">
+          <div class="anim-icon desktop" >
+            <lottie-player id="an-ic" src="./assets-web-dev/about-overwolf/json-lottie-files-icons/server.json"
+              background="transparent" speed="1" loop autoplay></lottie-player>
+          </div>
+          <div class="mobile-icon mobile">
+            <img src="./assets-web-dev/about-overwolf/icons/server.png" alt="">
+          </div>
+          <h3 class="box-title">
+            Legendary Servers
+          </h3>
+          <p class="box-parag">
+            Create in-game stores, sell goods to your <br> gamers and grow your player base through <br> our tools &
+            server list
+          </p>
+        </div>
+        <div class="inner-box">
+          <div class="anim-icon desktop" > 
+            <lottie-player id="an-ic" src="./assets-web-dev/about-overwolf/json-lottie-files-icons/megaphone.json"
+              background="transparent" speed="1" loop autoplay></lottie-player>
+          </div>
+          <div class="mobile-icon mobile">
+            <img src="./assets-web-dev/about-overwolf/icons/megaphone.png" alt="">
+          </div>
+          <h3 class="box-title">
+            Legendary Ads
+          </h3>
+          <p class="box-parag">
+            Supercharge your website with ads, and get <br> faster payments, customer service, and ad load time
+          </p>
+        </div>
+        <div class="inner-box">
+          <div class="anim-icon crystal desktop">
+            <lottie-player id="an-ic" src="./assets-web-dev/about-overwolf/json-lottie-files-icons/crystals.json"
+              background="transparent" speed="1" loop autoplay></lottie-player>
+          </div>
+          <div class="mobile-icon mobile">
+            <img src="./assets-web-dev/about-overwolf/icons/crystals.png" alt="">
+          </div>
+          <h3 class="box-title">
+            Legendary Funds
+          </h3>
+          <p class="box-parag">
+            Overwolf’s creator fund is a $50M fund <br> dedicated to supporting game studios, <br> developers and
+            creators
+          </p>
+        </div>
+      </div>
+
+    </section>
+    <section id="counter-anim">
+      <div class="box-width">
+        <div class="counter-box">
+          <div class="anim-num">
+            <div class="coun-css" id="counter">0</div>
+            <span class="plk">
+              B
+            </span>
+          </div>
+          <h4 class="spanbt">
+            YEARLY <br>
+            DOWNLOADS
+          </h4>
+        </div>
+        <div class="counter-box">
+          <div class="anim-num">
+            <div class="coun-css" id="counter1">0</div>
+            <span class="plk">
+              M
+            </span>
+          </div>
+          <h4 class="spanbt">
+            MONTHLY <br>
+            ACTIVE GAMERS
+          </h4>
+        </div>
+        <div class="counter-box">
+          <div class="anim-num">
+            <div class="coun-css" id="counter2">0</div>
+            <span class="plk">
+              K
+            </span>
+          </div>
+          <h4 class="spanbt">
+            in-game <br>
+            creators
+          </h4>
+        </div>
+        <div class="counter-box">
+          <div class="anim-num">
+            <div class="coun-css" id="counter3">0</div>
+            <span class="plk">
+              +
+            </span>
+          </div>
+          <h4 class="spanbt">
+            GAMES <br>
+            SUPPORTED
+          </h4>
+        </div>
+      </div>
+
+
+
+    </section>
+    <section id="video-section">
+      <div class="video-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/1uFGfVk-Jds?si=bqDh0H5q0MSks8l4"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+    </section>
+    <section id="app-suite">
+      <h3 class="suire-ttle">
+        Full Suite for App Creation Success
+      </h3>
+      <div class="app-box">
+        <div class="in-app-box">
+          <div class="app-icon">
+            <svg class="app-icon-svg">
+              <use xlink:href="./assets-web-dev/icons.svg#tools"></use>
+            </svg>
+          </div>
+          <h5 class="app-title">
+            Developer SDK
+          </h5>
+          <p class="app-parag">
+            Integrate various features such as overlays <br>
+            and real-time alerts
+          </p>
+        </div>
+        <div class="in-app-box">
+          <div class="app-icon">
+            <svg class="app-icon-svg">
+              <use xlink:href="./assets-web-dev/icons.svg#games"></use>
+            </svg>
+          </div>
+          <h5 class="app-title">
+            Game Event API
+          </h5>
+          <p class="app-parag">
+            Create apps that respond to in-game actions <br> & events
+          </p>
+        </div>
+        <div class="in-app-box">
+          <div class="app-icon">
+            <svg class="app-icon-svg">
+              <use xlink:href="./assets-web-dev/icons.svg#profit"></use>
+            </svg>
+          </div>
+          <h5 class="app-title">
+            Monetization Tools
+          </h5>
+          <p class="app-parag">
+            Turn your app into revenue through ads & <br> subscriptions
+          </p>
+        </div>
+      </div>
+    </section>
+    <section id="swip">
+     
+      <div #swiperRef="" class="swiper mySwiper">
+        <h3 class="success-stories-title">
+          Success Stories
+        </h3>
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="slide-bg bg-1">
+            </div>
+            <div class="icon-row">
+              <img src="./assets-web-dev/success-stories-slider/thumbnails-icon/slide-1-icon.png" alt="">
+              <p class="runmas">
+                RuneMaster
+              </p>
+            </div>
+            <p class="slide-parag">
+              RuneMaster predicts your opponent's rune choices based on historical <br> patterns and recommends the best counter-runes and champion strategies to <br> outplay them right from the start.
+            </p>
+          </div>
+          <div class="swiper-slide">
+            <div class="slide-bg bg-2">
+            </div>
+            <div class="icon-row">
+              <img src="./assets-web-dev/success-stories-slider/thumbnails-icon/slide-2-icon.png" alt="">
+              <p class="runmas">
+                ChampionSync
+              </p>
+            </div>
+            <p class="slide-parag">
+              ChampionSync analyzes your past matches and suggests champions that perfectly sync with your playstyle. It also suggests teammates that complement your team composition, boosting your synergy in ranked games.
+            </p>
+          </div>
+          <div class="swiper-slide">
+            <div class="slide-bg bg-3">
+            </div>
+            <div class="icon-row">
+              <img src="./assets-web-dev/success-stories-slider/thumbnails-icon/slide-3-icon.png" alt="">
+              <p class="runmas">
+                Pathfinder
+              </p>
+            </div>
+            <p class="slide-parag">
+              Pathfinder tracks enemy junglers in real-time by analyzing map patterns, predicting ganks before they happen, and offering optimal warding positions to keep your team safe.
+            </p>
+          </div>
+          <div class="swiper-slide">
+            <div class="slide-bg bg-4">
+            </div>
+            <div class="icon-row">
+              <img src="./assets-web-dev/success-stories-slider/thumbnails-icon/slide-4-icon.png" alt="">
+              <p class="runmas">
+                SkillCurve
+              </p>
+            </div>
+            <p class="slide-parag">
+              SkillCurve helps you master difficult champions by adapting in-game tutorials to your performance. It tracks your progress and adjusts its tips in real-time, making sure you're always improving your mechanics on the fly.
+            </p>
+          </div>
+          <div class="swiper-slide">
+            <div class="slide-bg bg-5">
+            </div>
+            <div class="icon-row">
+              <img src="./assets-web-dev/success-stories-slider/thumbnails-icon/slide-5-icon.png" alt="">
+              <p class="runmas">
+                Ult-Timer
+              </p>
+            </div>
+            <p class="slide-parag">
+              Ult-Timer tracks ultimate abilities for all champions on both teams, giving you an edge by alerting you when an enemy’s ultimate is ready or on cooldown, helping you plan fights more effectively.
+            </p>
+          </div>
+          <div class="swiper-slide">
+            <div class="slide-bg bg-6">
+            </div>
+            <div class="icon-row">
+              <img src="./assets-web-dev/success-stories-slider/thumbnails-icon/slide-6-icon.png" alt="">
+              <p class="runmas">
+                GankVision
+              </p>
+            </div>
+            <p class="slide-parag">
+              GankVision uses AI to predict potential gank scenarios based on lane pressure and jungle activity. It warns you with pop-up alerts whenever a gank might be heading your way, so you can always stay one step ahead.
+            </p>
+          </div>
+          <div class="swiper-slide">
+            <div class="slide-bg bg-7">
+            </div>
+            <div class="icon-row">
+              <img src="./assets-web-dev/success-stories-slider/thumbnails-icon/slide-7-icon.png" alt="">
+              <p class="runmas">
+                ClutchCoach
+              </p>
+            </div>
+            <p class="slide-parag">
+              ClutchCoach is a performance-enhancing app that analyzes high-pressure moments like team fights or baron steals. It gives you real-time advice on how to handle critical situations and boost your chances of pulling off game-changing plays.            </p>
+          </div>
+        </div>
+        <div class="swiper-button-next">
+        </div>
+        <div class="swiper-button-prev"></div>
+      </div>
+  
+    </section>
+  </main>
+<footer>
+  <div class="back-to-top">
+    <button class="scroll-to-top" onclick="scrollToTop()">
+      <svg class="scroll-icon">
+        <use xlink:href="./assets-web-dev/icons.svg#topArrow"></use>
+      </svg>
+      <p class="back-text">
+        Back to top
+      </p>
+    </button>
+  
+  </div>
+  <div class="footer-logo">
+    <a href="/" class="logo">
+      <svg class="logo-icon">
+        <use xlink:href="./assets-web-dev/icons.svg#logo"></use>
+      </svg>
+    </a>
+  </div>
+  <div class="bt-line"></div>
+</footer>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script>
+
+
+    const counter = new countUp.CountUp("counter", 15);
+    const counter1 = new countUp.CountUp("counter1", 100);
+    const counter2 = new countUp.CountUp("counter2", 178);
+    const counter3 = new countUp.CountUp("counter3", 1500);
+    function isInViewport(element) {
+      const rect = element.getBoundingClientRect();
+      return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+      );
+    }
+
+ 
+    function handleScroll() {
+      const counterElement = document.getElementById("counter");
+      if (isInViewport(counterElement)) {
+        counter.start();
+        counter1.start();
+        counter2.start();
+        counter3.start();
+        window.removeEventListener("scroll", handleScroll); 
+      }
+    }
+
+
+    window.addEventListener("scroll", handleScroll);
+    function scrollToNextSection(event) {
+      const currentSection = event.target.closest('section')
+      const nextSection = currentSection.nextElementSibling;   
+      if (nextSection) {
+        nextSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+    function initializeSwiper() {
+    if (window.swiperInstance) {
+      window.swiperInstance.destroy(true, true);
+    }
+
+    if (window.innerWidth >= 650) {
+   
+      window.swiperInstance = new Swiper(".mySwiper", {
+        slidesPerView: 4,
+        centeredSlides: true,
+        spaceBetween: 40,
+        pagination: {
+          el: ".swiper-pagination",
+          type: "fraction",
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    } else {
+      
+      window.swiperInstance = new Swiper(".mySwiper", {
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    }
+  }
+
+ 
+  window.addEventListener("load", initializeSwiper);
+
+ 
+  window.addEventListener("resize", initializeSwiper);
+      function scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }
+
+  
+    window.addEventListener('scroll', function() {
+      const scrollToTopButton = document.getElementById('scrollToTopButton');
+      if (window.scrollY > 200) {
+        scrollToTopButton.style.display = 'block';
+      } else {
+        scrollToTopButton.style.display = 'none';
+      }
+    });
+  </script>
+         
+  </script>
+</body>
+
+</html>

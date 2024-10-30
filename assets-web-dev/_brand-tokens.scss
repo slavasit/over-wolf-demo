@@ -1,0 +1,575 @@
+:root {
+  //Core Typography brand fonts
+	--font-family-brand: "Montserrat", sans-serif;
+  --font-family-default: "Lato", sans-serif;
+
+  // Font weight
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+
+  // Line height
+  --font-line-height-350: 14px; /* 31.818% */
+  --font-line-height-400: 16px; /* 36.364% */
+  --font-line-height-500: 20px; /* 45.455% */
+  --font-line-height-600: 24px; /* 54.545% */
+  --font-line-height-700: 28px; /* 63.636% */
+  --font-line-height-800: 32px; /* 72.727% */
+  --font-line-height-1000: 40px; /* 90.909% */
+  --font-line-height-1300: 52px; /* 118.182% */
+  --font-line-height-1800: 72px; /* 163.636% */
+  --font-line-height-2600: 104px; /* 236.364% */
+
+  //Letter spacing
+  --font-letter-spacing-default: 0px;
+  --font-letter-spacing-regular: 1.2px;
+
+  // Core font sizes
+  --font-size-300: 12px;
+  --font-size-350: 14px;
+  --font-size-400: 16px;
+  --font-size-450: 18px;
+  --font-size-500: 20px;
+  --font-size-550: 22px;
+  --font-size-600: 24px;
+  --font-size-800: 32px;
+  --font-size-1100: 44px;
+  --font-size-1600: 64px;
+  --font-size-2400: 96px;
+
+  //Company Main Brand Core colors
+  --color-brand-ow: #D34037;
+  --color-hover-brand-ow: #F05C48;
+  --color-brand-el: #9FEAF9;
+  --color-brand-el-2: #69C5EA;
+
+  //Core Neutral colors
+  --color-neutral-0: #000000;
+  --color-neutral-8: #101010;
+  --color-neutral-16: #202020;
+  --color-neutral-24: #303030;
+  --color-neutral-32: #404040;
+  --color-neutral-40: #505050;
+  --color-neutral-48: #606060;
+  --color-neutral-80: #9F9F9F;
+  --color-neutral-88: #AFAFAF;
+  --color-neutral-96: #BFBFBF;
+  --color-neutral-104: #CFCFCF;
+  --color-neutral-112: #DFDFDF;
+  --color-neutral-120: #EFEFEF;
+  --color-neutral-128: #FFFFFF;
+
+  // Core infographic colors for Overwolf
+
+  --color-infographic-ow-1: var(--color-brand-ow);
+  --color-infographic-ow-2: #942B27;
+  --color-infographic-ow-3: #FFD2D0;
+  --color-infographic-ow-4: #FFA4A1;
+  --color-infographic-ow-5: #EC7068;
+
+  // Surface colors
+  --color-surface-pure: var(--color-neutral-0);
+  --color-surface-primary: var(--color-neutral-8);
+  --color-surface-secondary: var(--color-neutral-16);
+  --color-surface-tertiary: var(--color-neutral-24);
+  --color-surface-quaternary: var(--color-neutral-48);
+  --color-surface-invert: var(--color-neutral-128);
+  --color-surface-brand-ow: var(--color-brand-ow);
+  --color-surface-brand-el: var(--color-brand-el);
+
+  // Text colors
+  --color-text-invert: var(--color-neutral-0);
+  --color-text-tertiary: var(--color-neutral-80);
+  --color-text-secondary: var(--color-neutral-96);
+  --color-text-primary: var(--color-neutral-112);
+  --color-text-pure: var(--color-neutral-128);
+  --color-text-cta-ow: var(--color-neutral-128);
+  --color-text-brand-ow: var(--color-brand-ow);
+  --color-text-hover-brand-ow: var(--color-hover-brand-ow);
+
+  // Icon colors
+  --color-icon-secondary: var(--color-neutral-80);
+  --color-icon-primary: var(--color-neutral-112);
+  --color-icon-pure: var(--color-neutral-128);
+  --color-icon-cta-ow-surface: var(--color-neutral-128);
+  --color-icon-brand-ow: var(--color-brand-ow);
+
+  // Border colors
+  --color-border-tertiary: var(--color-neutral-24);
+  --color-border-secondary: var(--color-neutral-48);
+  --color-border-primary: var(--color-neutral-96);
+
+  // Core Spaces
+  --space-0: 0px;
+  --space-50: 2px;
+  --space-100: 4px;
+  --space-200: 8px;
+  --space-300: 12px;
+  --space-400: 16px;
+  --space-500: 20px;
+  --space-600: 24px;
+  --space-800: 32px;
+  --space-1000: 40px;
+  --space-1200: 48px;
+  --space-1400: 56px;
+  --space-1600: 64px;
+  --space-1800: 72px;
+  --space-2000: 80px;
+  --space-2200: 88px;
+  --space-2400: 96px;
+  --space-2600: 104px;
+  --space-3200: 128px;
+  --space-4000: 160px;
+  --space-4800: 192px;
+  --space-5600: 224px;
+  --space-6400: 256px;
+}
+body{
+  font-family: var(--font-family-default);
+
+}
+html{
+  font-size: 16px;
+  background: #000000;
+}
+h1{
+  color: var(--color-brand-ow);;
+}
+
+:root {
+  //Core Typography brand fonts
+	--font-family-brand: "Montserrat", sans-serif;
+  --font-family-default: "Lato", sans-serif;
+
+  // Font weight
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+
+  // Line height
+  --font-line-height-350: 14px; /* 31.818% */
+  --font-line-height-400: 16px; /* 36.364% */
+  --font-line-height-500: 20px; /* 45.455% */
+  --font-line-height-600: 24px; /* 54.545% */
+  --font-line-height-700: 28px; /* 63.636% */
+  --font-line-height-800: 32px; /* 72.727% */
+  --font-line-height-1000: 40px; /* 90.909% */
+  --font-line-height-1300: 52px; /* 118.182% */
+  --font-line-height-1800: 72px; /* 163.636% */
+  --font-line-height-2600: 104px; /* 236.364% */
+
+  //Letter spacing
+  --font-letter-spacing-default: 0px;
+  --font-letter-spacing-regular: 1.2px;
+
+  // Core font sizes
+  --font-size-300: 12px;
+  --font-size-350: 14px;
+  --font-size-400: 16px;
+  --font-size-450: 18px;
+  --font-size-500: 20px;
+  --font-size-550: 22px;
+  --font-size-600: 24px;
+  --font-size-800: 32px;
+  --font-size-1100: 44px;
+  --font-size-1600: 64px;
+  --font-size-2400: 96px;
+
+  //Company Main Brand Core colors
+  --color-brand-ow: #D34037;
+  --color-hover-brand-ow: #F05C48;
+  --color-brand-el: #9FEAF9;
+  --color-brand-el-2: #69C5EA;
+
+  //Core Neutral colors
+  --color-neutral-0: #000000;
+  --color-neutral-8: #101010;
+  --color-neutral-16: #202020;
+  --color-neutral-24: #303030;
+  --color-neutral-32: #404040;
+  --color-neutral-40: #505050;
+  --color-neutral-48: #606060;
+  --color-neutral-80: #9F9F9F;
+  --color-neutral-88: #AFAFAF;
+  --color-neutral-96: #BFBFBF;
+  --color-neutral-104: #CFCFCF;
+  --color-neutral-112: #DFDFDF;
+  --color-neutral-120: #EFEFEF;
+  --color-neutral-128: #FFFFFF;
+
+  // Core infographic colors for Overwolf
+
+  --color-infographic-ow-1: var(--color-brand-ow);
+  --color-infographic-ow-2: #942B27;
+  --color-infographic-ow-3: #FFD2D0;
+  --color-infographic-ow-4: #FFA4A1;
+  --color-infographic-ow-5: #EC7068;
+
+  // Surface colors
+  --color-surface-pure: var(--color-neutral-0);
+  --color-surface-primary: var(--color-neutral-8);
+  --color-surface-secondary: var(--color-neutral-16);
+  --color-surface-tertiary: var(--color-neutral-24);
+  --color-surface-quaternary: var(--color-neutral-48);
+  --color-surface-invert: var(--color-neutral-128);
+  --color-surface-brand-ow: var(--color-brand-ow);
+  --color-surface-brand-el: var(--color-brand-el);
+
+  // Text colors
+  --color-text-invert: var(--color-neutral-0);
+  --color-text-tertiary: var(--color-neutral-80);
+  --color-text-secondary: var(--color-neutral-96);
+  --color-text-primary: var(--color-neutral-112);
+  --color-text-pure: var(--color-neutral-128);
+  --color-text-cta-ow: var(--color-neutral-128);
+  --color-text-brand-ow: var(--color-brand-ow);
+  --color-text-hover-brand-ow: var(--color-hover-brand-ow);
+
+  // Icon colors
+  --color-icon-secondary: var(--color-neutral-80);
+  --color-icon-primary: var(--color-neutral-112);
+  --color-icon-pure: var(--color-neutral-128);
+  --color-icon-cta-ow-surface: var(--color-neutral-128);
+  --color-icon-brand-ow: var(--color-brand-ow);
+
+  // Border colors
+  --color-border-tertiary: var(--color-neutral-24);
+  --color-border-secondary: var(--color-neutral-48);
+  --color-border-primary: var(--color-neutral-96);
+
+  // Core Spaces
+  --space-0: 0px;
+  --space-50: 2px;
+  --space-100: 4px;
+  --space-200: 8px;
+  --space-300: 12px;
+  --space-400: 16px;
+  --space-500: 20px;
+  --space-600: 24px;
+  --space-800: 32px;
+  --space-1000: 40px;
+  --space-1200: 48px;
+  --space-1400: 56px;
+  --space-1600: 64px;
+  --space-1800: 72px;
+  --space-2000: 80px;
+  --space-2200: 88px;
+  --space-2400: 96px;
+  --space-2600: 104px;
+  --space-3200: 128px;
+  --space-4000: 160px;
+  --space-4800: 192px;
+  --space-5600: 224px;
+  --space-6400: 256px;
+}
+
+body {
+  font-family: var(--font-family-default);
+}
+
+svg.logo-icon {
+  width: 9.6rem;
+  height: 4rem;
+}
+
+.arrow-down:hover {
+  cursor: pointer;
+}
+
+.arrow-down {
+  display: flex;
+  align-self: center;
+  background: transparent;
+  box-shadow: none;
+  border: none;
+  margin: 24rem auto 6rem;
+  svg {
+    color: var(--color-neutral-128);
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+
+nav {
+  padding: 0 0.6rem;
+  height: 5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+button.header-join-btn {
+  height: 2.2rem;
+  padding: 0.231rem 1.375rem;
+  width: fit-content;
+  font-family: var(--font-family-brand);
+  font-size: 1rem;
+  font-weight: var(--font-weight-medium);
+  line-height: 1.5rem;
+  border-color: var(--color-neutral-112);
+  color: var(--color-neutral-112);
+  background: transparent;
+  margin: 0.938rem 0;
+  border-width: 0.063rem;
+  &:hover {
+    background: var(--color-hover-brand-ow);
+    cursor: pointer;
+    color: var(--color-neutral-128);
+  }
+}
+
+#hero {
+  background-image: url('./assets-web-dev/hero/hero-bg.png');
+  background-size: 60rem;
+  background-position: 94% -2%;
+  background-repeat: no-repeat;
+  height: 56.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+h1.enter-the-guild {
+  font-family: var(--font-family-brand);
+  color: var(--color-neutral-128);
+  font-size: 4rem;
+  line-height: 4.5rem;
+  margin: 0;
+}
+
+h2.we-emp {
+  margin: 1.5rem 0;
+  color: var(--color-neutral-112);
+  font-size: 1.375rem;
+  font-weight: var(--font-weight-medium);
+  line-height: 2rem;
+  font-family: var(--font-family-brand);
+}
+
+.hero-box {
+  width: 87.25rem;
+  margin: 0 auto;
+  justify-content: space-between;
+  display: flex;
+}
+
+.wolf-img {
+  width: 57rem;
+  margin-right: -11.2rem;
+  img {
+    width: 100%;
+  }
+}
+
+.left-hero-box {
+  margin-top: 11.9rem;
+}
+
+button.join-now {
+  height: 3rem;
+  padding: 0.875rem 2rem;
+  width: fit-content;
+  font-family: var(--font-family-brand);
+  font-size: 1rem;
+  font-weight: var(--font-weight-medium);
+  line-height: 1.5rem;
+  letter-spacing: 0.075rem;
+  background: var(--color-brand-ow);
+  box-shadow: none;
+  border: none;
+  color: var(--color-neutral-128);
+}
+
+.about-overwolf-title {
+  font-family: var(--font-family-brand);
+  color: var(--color-neutral-128);
+  font-size: 2.75rem;
+  font-weight: var(--font-weight-bold);
+  line-height: 3.25rem;
+  margin: 5.4rem auto 1rem;
+  text-align: center;
+}
+
+#an-ic {
+  width: 7.563rem;
+  height: 9.875rem;
+}
+
+.inner-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 6rem 3rem;
+  background: var(--color-neutral-8);
+  width: 24%;
+  margin: 1rem;
+}
+
+.flex-box-about {
+  display: flex;
+  width: 87.25rem;
+  justify-content: center;
+  margin: auto;
+  flex-wrap: wrap;
+  flex: 1 0 30%;
+  padding-bottom: 6rem;
+}
+
+.anim-icon {
+  width: 7rem;
+  height: 7rem;
+}
+
+h3.box-title {
+  color: var(--color-neutral-128);
+  font-size: 1.5rem;
+  padding: 2.563rem 0 1.438rem;
+  margin: 0;
+  font-family: var(--font-family-brand);
+}
+
+p.box-parag {
+  color: var(--color-neutral-112);
+  font-family: var(--font-family-brand);
+  font-size: 0.95rem;
+  text-align: center;
+  font-weight: var(--font-weight-regular);
+  line-height: 1.75rem;
+  margin: 0;
+}
+
+.box-width {
+  width: 87.25rem;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 3.5rem;
+}
+
+.counter-box {
+  width: auto;
+}
+
+.anim-num {
+  font-size: 4rem;
+  color: var(--color-brand-ow);
+  display: flex;
+  font-weight: var(--font-weight-bold);
+  font-family: var(--font-family-brand);
+  line-height: 4.5rem;
+}
+
+h4.spanbt {
+  color: var(--color-neutral-112);
+  text-align: center;
+  font-family: var(--font-family-brand);
+  text-transform: uppercase;
+  font-weight: var(--font-weight-medium);
+  line-height: 1.5rem;
+  font-size: 1rem;
+  letter-spacing: 0.075rem;
+  margin-top: 0.6rem;
+}
+
+.video-container {
+  text-align: center;
+  padding-top: 10.4rem;
+  padding-bottom: 11.5rem;
+  iframe {
+    width: 70rem;
+    height: 39.4rem;
+  }
+}
+
+.in-app-box {
+  color: var(--color-neutral-128);
+  padding: 3.1rem 3.5rem 2rem;
+  background-color: var(--color-neutral-8);
+}
+
+h3.suire-ttle {
+  color: var(--color-neutral-128);
+  font-family: var(--font-family-brand);
+  font-size: 2.75rem;
+  font-weight: var(--font-weight-bold);
+  line-height: 3.25rem;
+  text-align: center;
+  margin: 0;
+}
+
+.app-box {
+  width: 87.25rem;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3rem;
+}
+
+.app-icon-svg {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+h5.app-title {
+  color: var(--color-neutral-128);
+  font-family: var(--font-family-brand);
+  font-size: 1.5rem;
+  font-weight: var(--font-weight-bold);
+  line-height: 1.75rem;
+  margin-bottom: 0;
+  margin-top: 1.3rem;
+}
+
+p.app-parag {
+  color: var(--color-neutral-112);
+  font-family: var(--font-family-default);
+  font-size: 1.125rem;
+  font-weight: var(--font-weight-regular);
+  line-height: 1.75rem;
+  margin-top: 0.5rem;
+}
+
+.swiper {
+  width: 100%;
+  height: auto;
+  margin: 1.25rem auto;
+  background: var(--color-neutral-8);
+  width: 120rem;
+  margin-top: 6rem;
+  padding-top: 3.4rem;
+  padding-bottom: 10rem;
+}
+
+.bg-1,
+.bg-2,
+.bg-3,
+.bg-4,
+.bg-5,
+.bg-6,
+.bg-7 {
+  background-size: cover;
+}
+
+.slide-bg {
+  width: 100%;
+  height: 21.5rem;
+}
+
+.swiper-wrapper {
+  margin-left: -29.7rem;
+}
+
+.swiper-slide {
+  width: 24.5rem !important;
+  display: flex;
+  flex-direction: column;
+  margin-right: 1.563rem !important;
+}
+
+h3.success-stories-title {
+  color: var(--color-neutral-128);
+  text-align: center;
+  font-family: var(--font-family-brand);
+  font-weight: var(--font-weight-bold);
+  font-size: 2.75rem;
+  margin-bottom: 3.2rem;
+}
